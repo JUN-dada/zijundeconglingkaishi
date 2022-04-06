@@ -1,0 +1,123 @@
+import java.util.Scanner;
+
+/*
+修饰符，返回类型，方法名（参数类型，参数名........）
+{
+代码
+return...
+}
+ */
+public class fangfa {
+    public static void main(String[] args) {
+      /*  int height;
+        int weight;
+        System.out.println("输入长和宽");
+        Scanner scanner = new Scanner(System.in);
+        height = scanner.nextByte();
+        weight = scanner.nextByte();
+        System.out.println("你的长方形面积是");
+        System.out.println(area(weight, height));
+        System.out.println("你的长方形周长是");
+        System.out.println(perimeter(weight, height));
+        System.out.println("你的长方形形状是");
+        printRectangle(weight, height);
+       */
+        /*
+        int x=1;
+        int y=3;
+        ziJia(x,y);
+        System.out.println(x);
+        System.out.println(y);
+
+         */
+
+        /*
+        Scanner sc=new Scanner(System.in);
+        int x= sc.nextInt();
+        int y= sc.nextInt();
+        int a= sc.nextInt();
+        int b= sc.nextInt();
+        System.out.println(distance(x,y,a,b));
+         */
+
+        /*
+        int x=1;
+        int y=2;
+        int z=3;
+        float a=3.4f;
+        float b=5.6f;
+        int sum=sum(x,y);
+        float sum1=sum(a,b);
+        int sum2=sum(x,y,z);
+        System.out.println(sum);
+        System.out.println(sum1);
+        System.out.println(sum2);
+         */
+
+        int[] x = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        int max = getmax(x);
+        System.out.println(max);
+    }
+
+    //定义打印长方形的方法
+    public static void printRectangle(int height, int weight) {
+        for (int i = 0; i < weight; i++) {
+            for (int j = 0; j < height; j++) {
+                System.out.print("*");
+            }
+            System.out.print("\n");
+        }
+        System.out.print("\n");
+    }
+
+    //周长
+    public static double perimeter(double height, double weight) {
+        double perimeter;
+        perimeter = height * 2 + weight * 2;
+        return perimeter;
+    }
+
+    //面积
+    public static double area(double height, double weight) {
+        double area;
+        area = height * weight;
+        return area;
+    }
+
+    public static void ziJia(int x, int y) {
+        x++;
+        y++;
+    }
+
+    public static double distance(int x, int y, int a, int b) {
+        double distance;
+        distance = Math.sqrt((a - x) * (a - x) + (b - y) * (b - y));
+        return distance;
+    }
+
+    public static int sum(int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+
+    public static int sum(int a, int b, int c) {
+        int sum = a + b;
+        return sum;
+    }
+
+    public static float sum(float a, float b) {
+        float sum = a + b;
+        return sum;
+    }
+
+    public static int getmax(int[] a) {
+        int max = a[0];
+        for (int i = 1; i < a.length; i++) {
+            if (a[i] > max) {
+                max = a[i];
+            }
+        }
+        return max;
+    }
+    }
+
